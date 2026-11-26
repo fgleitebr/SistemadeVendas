@@ -31,7 +31,7 @@ export default defineConfig({
     testIdAttribute: 'data-test',
     viewport: { width: 1920, height: 1080 },
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    headless: false,
+    headless: !!process.env.CI,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: {

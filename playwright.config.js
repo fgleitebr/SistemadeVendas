@@ -63,7 +63,7 @@ export default defineConfig({
         
         
         // Libera o tamanho da página para acompanhar a janela
-        viewport: null,
+        viewport: process.env.CI ? { width: 1920, height: 1080 } : null,
         storageState: 'playwright/.auth/usuario.json',
         launchOptions: {
         
